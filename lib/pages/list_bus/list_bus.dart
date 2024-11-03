@@ -29,22 +29,23 @@ class _ListBusPageState extends State<ListBusPage> {
           children: <Widget>[
             Expanded(
               child: Container(
-                margin: const EdgeInsets.only(left: 16, right: 16),
+                margin: const EdgeInsets.all(16),
                 child: ListView.builder(
                   itemCount: 10,
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ListBusPage()),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => ListBusPage()),
+                        // );
                       },
                       child: Container(
+                        padding: const EdgeInsets.all(10),
                         margin: const EdgeInsets.only(bottom: 10),
-                        color: Theme.of(context).colorScheme.secondary,
+                        color: Theme.of(context).primaryColor.withOpacity(0.1),
                         child: ListTile(
-                          leading: SvgPicture.asset('images/ic_bus_stop.svg', width: 40, height: 40,),
+                          leading: SvgPicture.asset('images/ic_bus.svg', width: 40, height: 40,),
                           title: Text('Bus $index'),
                           titleTextStyle: TextStyle(
                             color: Colors.black,

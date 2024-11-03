@@ -23,6 +23,14 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
       ),
+
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).primaryColor,
+        tooltip: 'Increment',
+        onPressed: (){},
+        child: const Icon(Icons.map, color: Colors.white, size: 28),
+      ),
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
