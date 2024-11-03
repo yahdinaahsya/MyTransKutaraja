@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My TransKutaraja',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: color,
         useMaterial3: true,
       ),
       home: const WelcomePage(),
@@ -22,4 +22,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
+ColorScheme color = const ColorScheme(
+    brightness: Brightness.light,
+    primary: Color(0xFF007DFE),
+    onPrimary: Colors.white,
+    secondary: Color(0xFFFFF8D6),
+    onSecondary: Colors.black,
+    error: Colors.red,
+    onError: Colors.white,
+    surface: Colors.white,
+    onSurface: Colors.black);
